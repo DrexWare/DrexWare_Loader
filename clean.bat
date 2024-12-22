@@ -730,7 +730,7 @@ rmdir /s /q "%systemdrive%\Intel"
 @del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\LocalLow\Microsoft\CryptnetUrlCache\*.*
 @del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\Microsoft\Windows\WebCache\*.*
 @del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles\*.*
-@del /s /f /a:h /a:a /q "%systemdrive%\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\*.*
+
 @del /s /f /a:h /a:a /q "%systemdrive%\Windows\Prefetch\*.*
 @del /s /f /a:h /a:a /q "%systemdrive%\ProgramData\Microsoft\Diagnosis\EventStore.db-wal\*.*
 @del /s /f /a:h /a:a /q "%systemdrive%\Windows\System32\perfc009.dat\*.*
@@ -1829,7 +1829,7 @@ rmdir /s /q "%systemdrive%\Intel"
 @del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\LocalLow\Microsoft\CryptnetUrlCache\*.*
 @del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\Microsoft\Windows\WebCache\*.*
 @del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles\*.*
-@del /s /f /a:h /a:a /q "%systemdrive%\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\*.*
+
 @del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Roaming\Microsoft\Windows\CloudStore\*.*
 @del /s /f /a:h /a:a /q "%systemdrive%\Windows\Prefetch\*.*
 @del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\FortniteGame\Saved\LMS\*.*
@@ -2169,7 +2169,7 @@ rmdir /s /q "%systemdrive%\Intel"
 @del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\LocalLow\Microsoft\CryptnetUrlCache\*.*
 @del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\Microsoft\Windows\WebCache\*.*
 @del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles\*.*
-@del /s /f /a:h /a:a /q "%systemdrive%\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\*.*
+
 @del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Roaming\Microsoft\Windows\CloudStore\*.*
 @del /s /f /a:h /a:a /q "%systemdrive%\Windows\Prefetch\*.*
 @del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\FortniteGame\Saved\LMS\*.*
@@ -2368,8 +2368,7 @@ del "C:\Users\%username%\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content\77E
 del "C:\Windows\INF\netrasa.PNF",
 del "C:\Users\%username%\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content",
 del "C:\Users\%username%\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content\FB0D848F74F70BB2EAA93746D24D9749",
-del "C:\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache",
-del "C:\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache",
+
 del "C:\Windows\prefetch\reg.EXE-0AC99A87.pf",
 del "C:\Windows\prefetch\reg.EXE-0AC99A87.pf",
 del "C:\Windows\prefetch\reg.EXE-0AC99A87.pf",
@@ -3541,8 +3540,7 @@ rd /q /s d:\$Recycle.Bin
 rd /q /s e:\$Recycle.Bin
 rd /q /s f:\$Recycle.Bin
 cls
-echo Cleared main tracers!
-pause
+
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography" /v MachineGuid /t REG_SZ /d %Hex8%-%Hex1%-%Hex0%-%Hex1%-%Hex10% /f>nul 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v BuildGUID /t REG_SZ /d %Hex8%-%Hex1%-%Hex0%-%Hex1%-%Hex10% /f>nul 2>&1
 REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\{4d36e967-e325-11ce-bfc1-08002be10318}\Configuration\Variables\BusDeviceDesc" /v PropertyGuid /t REG_SZ /d {%Hex8%-%Hex1%-%Hex0%-%Hex1%-%Hex10%} /f>nul 2>&1
@@ -3577,7 +3575,6 @@ REG ADD HKLM\System\CurrentControlSet\Control\WMI\Security /v 671a8285-4edb-4cae
 
 
 REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion" "WindowsUpdate /v SusClientId /t REG_SZ /d {%random%-%random%-%random%-%random%-%random%} /f
-echo Registry spoofed!
 
 reg delete "HKEY_CLASSES_ROOT\com.epicgames.launcher" /f
 reg delete "HKEY_CURRENT_USER\SOFTWARE\Epic Games" /f
@@ -4272,9 +4269,8 @@ reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\discord-43
 reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\discord-432980957394370572\URL Protocol: """ /f
 reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\discord-432980957394370572\DefaultIcon\: "C:\Program Files\Epic Games\Fortnite\FortniteGame\Binaries\Win64\FortniteClient-Win64-Shipping.exe"" /f
 reg delete "HKU\S-1-5-21-2532382528-581214834-2534474248-1001_Classes\discord-432980957394370572\shell\open\command\: "C:\Program Files\Epic Games\Fortnite\FortniteGame\Binaries\Win64\FortniteClient-Win64-Shipping.exe"" /f
-cls
-echo cleared registry part 1.
-pause
+
+
 del /s /f /a:h /a:a /d C:\MSOCache
 del /s /f /a:h /a:a /d C:\MSOCache\{71230000-00E2-0000-1000-00000000}
 del /s /f /a:h /a:a /d C:\MSOCache\{71230000-00E2-0000-1000-00000000}\Setup.dat
@@ -4737,7 +4733,7 @@ del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\Placeholder
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\LocalLow\Microsoft\CryptnetUrlCache\*.*
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\Microsoft\Windows\WebCache\*.*
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles\*.*
-del /s /f /a:h /a:a /q "%systemdrive%\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\*.*
+
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Roaming\Microsoft\Windows\CloudStore\*.*
 del /s /f /a:h /a:a /q "%systemdrive%\Windows\Prefetch\*.*
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\FortniteGame\Saved\LMS\*.*
@@ -4878,7 +4874,6 @@ rmdir /s /q "%systemdrive%\Windows\INF\netrasa.PNF\*.*"
 rmdir /s /q "%systemdrive%\Windows\Logs\WindowsUpdate"
 rmdir /s /q "%systemdrive%\Windows\Logs\WindowsUpdate\*.*"
 rmdir /s /q "%systemdrive%\Windows\Prefetch"
-rmdir /s /q "%systemdrive%\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\*.*"
 rmdir /s /q "%systemdrive%\Windows\SoftwareDistribution\DataStore"
 rmdir /s /q "%systemdrive%\Windows\SoftwareDistribution\DataStore\*.*"
 rmdir /s /q "%systemdrive%\Windows\SoftwareDistribution\ReportingEvents.log"
@@ -5018,7 +5013,7 @@ del /f /s /q "%systemdrive%\Windows\Logs\WindowsUpdate\*.*"
 del /f /s /q "%systemdrive%\Windows\Prefetch\*.*"
 del /f /s /q "%systemdrive%\Windows\ServiceProfiles\LocalService\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content\*.*"
 del /f /s /q "%systemdrive%\Windows\ServiceProfiles\LocalService\AppData\LocalLow\Microsoft\CryptnetUrlCache\MetaData\*.*"
-del /f /s /q "%systemdrive%\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\*.*"
+
 del /f /s /q "%systemdrive%\Windows\ServiceProfiles\LocalService\AppData\Local\Temp\*.*"
 del /f /s /q "%systemdrive%\Windows\SoftwareDistribution\DataStore\*.*"
 del /f /s /q "%systemdrive%\Windows\SoftwareDistribution\DataStore\Logs\*.*"
@@ -6283,9 +6278,7 @@ del /s /f /a:h /a:a /q "C:\Windows\INF\WmiApRpl*.*
 del /s /f /a:h /a:a /q "C:\Windows\INF\WmiApRpl\0009*.*
 del /s /f /a:h /a:a /q "C:\Windows\System32\config\systemprofile\AppData\LocalLow\Microsoft\CryptnetUrlCache\MetaData*.*
 cls
-echo cleaned windows sdk stuff
 
-pause
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\Google\Chrome\User Data\Default\Cache\f_0004f7*.*
  del /s /f /a:h /a:a /q C:\MSOCache
  del /s /f /a:h /a:a /q C:\MSOCache\{71230000-00E2-0000-1000-00000000}
@@ -6325,8 +6318,7 @@ del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\Google\Chro
  del /s /f /a:h /a:a /q C:\Windows\System32\winevt\Logs\Microsoft-Windows-Resource-Exhaustion-Resolver%4Operational.evtx "Modified=6/22/2020 11:10:32 PM" (old value="Modified=6/22/2020 6:20:55 PM")
          del /s /f /a:h /a:a /q C:\Windows\System32\winevt\Logs\Microsoft-Windows-WER-PayloadHealth%4Operational.evtx "Modified=6/22/2020 11:10:35 PM" (old value="Modified=6/22/2020 6:14:54 PM")
 cls
-echo deleted all fn tracers...
-pause
+
 reg delete HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\microphone\NonPackaged\C:#Program Files#Epic Games#Fortnite#FortniteGame#Binaries#Win64#FortniteClient-Win64-Shipping.exe
 reg delete HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\microphone\NonPackaged\C:#Program Files#Epic Games#Fortnite#FortniteGame#Binaries#Win64#FortniteClient-Win64-Shipping.exe\LastUsedTimeStart 132373555440161291
 reg delete HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\microphone\NonPackaged\C:#Program Files#Epic Games#Fortnite#FortniteGame#Binaries#Win64#FortniteClient-Win64-Shipping.exe\LastUsedTimeStop 132373556187481540
@@ -7433,8 +7425,7 @@ REG DELETE HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManage
 REG DELETE HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\microphone\NonPackaged\D:#Program Files#Epic Games#Fortnite#FortniteGame#Binaries#Win64#FortniteClient-Win64-Shipping.exe\LastUsedTimeStart	132373518861234477
 REG DELETE HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\microphone\NonPackaged\D:#Program Files#Epic Games#Fortnite#FortniteGame#Binaries#Win64#FortniteClient-Win64-Shipping.exe\LastUsedTimeStop	132373519455546729
 cls
-echo cleared misc tracers...
-pause
+
 del /s /f /a:h /a:a /q "D:\Users\%username%\ntuser.ini:NTV"
 del /s /f /a:h /a:a /q "D:\ProgramData\Microsoft\Windows\DeviceMetadataCache\dmrc.idx"
 del /s /f /a:h /a:a /q "D:\System Volume Information\tracking.log"
@@ -9313,7 +9304,7 @@ del /s /f /a:h /a:a /q "D:\Users\All Users\Microsoft\Windows\WER\Temp*.*
 del /s /f /a:h /a:a /q "D:\Windows\INF\WmiApRpl*.*
 del /s /f /a:h /a:a /q "D:\Windows\INF\WmiApRpl\0009*.*
 del /s /f /a:h /a:a /q "C:\Windows\System32\config\systemprofile\AppData\LocalLow\Microsoft\CryptnetUrlCache\MetaData*.*
-pause
+
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\Google\Chrome\User Data\Default\Cache\f_0004f7*.*
  del /s /f /a:h /a:a /q D:\MSOCache
  del /s /f /a:h /a:a /q D:\MSOCache\{71230000-00E2-0000-1000-00000000}
@@ -10681,7 +10672,7 @@ del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\Placeholder
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\LocalLow\Microsoft\CryptnetUrlCache\*.*
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\Microsoft\Windows\WebCache\*.*
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles\*.*
-del /s /f /a:h /a:a /q "%systemdrive%\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\*.*
+
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Roaming\Microsoft\Windows\CloudStore\*.*
 del /s /f /a:h /a:a /q "%systemdrive%\Windows\Prefetch\*.*
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\FortniteGame\Saved\LMS\*.*
@@ -10822,7 +10813,8 @@ rmdir /s /q "%systemdrive%\Windows\INF\netrasa.PNF\*.*"
 rmdir /s /q "%systemdrive%\Windows\Logs\WindowsUpdate"
 rmdir /s /q "%systemdrive%\Windows\Logs\WindowsUpdate\*.*"
 rmdir /s /q "%systemdrive%\Windows\Prefetch"
-rmdir /s /q "%systemdrive%\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\*.*"
+
+
 rmdir /s /q "%systemdrive%\Windows\SoftwareDistribution\DataStore"
 rmdir /s /q "%systemdrive%\Windows\SoftwareDistribution\DataStore\*.*"
 rmdir /s /q "%systemdrive%\Windows\SoftwareDistribution\ReportingEvents.log"
@@ -12242,7 +12234,7 @@ del /s /f /a:h /a:a /q "E:\Users\All Users\Microsoft\Windows\WER\Temp*.*
 del /s /f /a:h /a:a /q "E:\Windows\INF\WmiApRpl*.*
 del /s /f /a:h /a:a /q "E:\Windows\INF\WmiApRpl\0009*.*
 del /s /f /a:h /a:a /q "C:\Windows\System32\config\systemprofile\AppData\LocalLow\Microsoft\CryptnetUrlCache\MetaData*.*
-pause
+ 
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\Google\Chrome\User Data\Default\Cache\f_0004f7*.*
  del /s /f /a:h /a:a /q E:\MSOCache
  del /s /f /a:h /a:a /q E:\MSOCache\{71230000-00E2-0000-1000-00000000}
@@ -13609,7 +13601,7 @@ del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\Placeholder
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\LocalLow\Microsoft\CryptnetUrlCache\*.*
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\Microsoft\Windows\WebCache\*.*
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles\*.*
-del /s /f /a:h /a:a /q "%systemdrive%\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\*.*
+
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Roaming\Microsoft\Windows\CloudStore\*.*
 del /s /f /a:h /a:a /q "%systemdrive%\Windows\Prefetch\*.*
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\FortniteGame\Saved\LMS\*.*
@@ -15170,7 +15162,7 @@ del /s /f /a:h /a:a /q "F:\Users\All Users\Microsoft\Windows\WER\Temp*.*
 del /s /f /a:h /a:a /q "F:\Windows\INF\WmiApRpl*.*
 del /s /f /a:h /a:a /q "F:\Windows\INF\WmiApRpl\0009*.*
 del /s /f /a:h /a:a /q "C:\Windows\System32\config\systemprofile\AppData\LocalLow\Microsoft\CryptnetUrlCache\MetaData*.*
-pause
+ 
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\Google\Chrome\User Data\Default\Cache\f_0004f7*.*
  del /s /f /a:h /a:a /q F:\MSOCache
  del /s /f /a:h /a:a /q F:\MSOCache\{71230000-00E2-0000-1000-00000000}
@@ -16351,7 +16343,7 @@ del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\Placeholder
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\LocalLow\Microsoft\CryptnetUrlCache\*.*"
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Local\Microsoft\Windows\WebCache\*.*"
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles\*.*"
-del /s /f /a:h /a:a /q "%systemdrive%\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\*.*"
+
 del /s /f /a:h /a:a /q "%systemdrive%\Users\%username%\AppData\Roaming\Microsoft\Windows\CloudStore\*.*"
 del /s /f /a:h /a:a /q "%systemdrive%\Windows\Prefetch\*.*"
 del /s /f /a:h /a:a /q "%systemdrive%\ProgramData\Microsoft\Diagnosis\EventStore.db-wal\*.*"
